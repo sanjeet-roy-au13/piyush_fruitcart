@@ -26,7 +26,7 @@ const userController = {
             const refreshtoken = createRefreshToken({ id: newUser._id })
 
             res.cookie('refreshtoken', refreshtoken, {
-                // httpOnly: true,
+                httpsOnly: true,
                 path: '/user/refresh_token'
             })
 
@@ -51,7 +51,7 @@ const userController = {
             const refreshtoken = createRefreshToken({id: user._id})
 
             res.cookie('refreshtoken', refreshtoken, {
-                // httpOnly: true,
+                httpsOnly: true,
                 path: '/user/refresh_token'
             })
             
